@@ -15,8 +15,11 @@ spec:
     spec:
       containers:
       - name: impermanent
-        image: <Image> # replace me!
+        image: ghcr.io/juliengiguere/impermanent-test-web:latest
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        env:
+        - name: API
+          value: <api-url>
